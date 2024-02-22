@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="15dp"
+    tools:context=".SignIn">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/my_guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/my_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/my_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/welcome_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_back"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:paddingVertical="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/my_guideline1"
+        app:layout_constraintRight_toLeftOf="@id/my_guideline2"/>
+    <EditText
+        android:id="@+id/signIn_e_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="@string/email_address"
+        android:textSize="17sp"
+        android:autofillHints=""
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/welcome_tv"
+        app:layout_constraintLeft_toRightOf="@id/my_guideline1"
+        app:layout_constraintRight_toLeftOf="@id/my_guideline2"/>
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/signIn_pwd_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/password"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/signIn_e_et"
+        app:layout_constraintLeft_toRightOf="@id/my_guideline1"
+        app:layout_constraintRight_toLeftOf="@id/my_guideline2"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/signIn_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        app:layout_constraintBottom_toTopOf="@id/my_guideline3"
+        app:layout_constraintLeft_toRightOf="@id/my_guideline1"
+        app:layout_constraintRight_toLeftOf="@id/my_guideline2"/>
+
+    <ProgressBar
+        android:id="@+id/signIn_pb"
+        android:visibility="gone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@id/my_guideline3"
+        app:layout_constraintLeft_toRightOf="@id/my_guideline1"
+        app:layout_constraintRight_toLeftOf="@id/my_guideline2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
