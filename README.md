@@ -1,1 +1,1 @@
-A Mobile Application for Creating, Reading, updating and deleting user finances.
+An Admin based Mobile Application for Creating, Reading, updating and deleting user finances.
