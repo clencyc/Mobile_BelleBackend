@@ -53,6 +53,11 @@ class Home : AppCompatActivity() {
             var todash = Intent(this, UserDash::class.java)
             startActivity(todash)
         }
+
+        account_section.setOnClickListener {
+            var toaccounts = Intent(this, SignIn::class.java)
+            startActivity(toaccounts)
+        }
     }
 
     private fun createDialog(textView: TextView): AlertDialog {
