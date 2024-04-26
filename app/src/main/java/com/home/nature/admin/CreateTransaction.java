@@ -117,6 +117,7 @@ public class CreateTransaction extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+
                         Toast.makeText(CreateTransaction.this, "Payment added successfully.", Toast.LENGTH_LONG).show();
                         clearInput();
                         bClicked(false);

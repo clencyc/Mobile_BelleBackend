@@ -7,15 +7,19 @@ import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.home.nature.admin.UpdateTrans;
 import com.home.nature.entity.PaymentEntity;
 import com.home.nature.repo.PaymentRepo;
 
@@ -27,12 +31,14 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     RecyclerView recyclerView;
     TextInputLayout textInputLayout;
+    ImageView my_Imageview;
     TextInputEditText textInputEditText;
     private List<PaymentEntity> paymentEntityList;
     private Adapter paymentAdapter;
     private PaymentRepo paymentRepo;
     TextView noData;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.main_tb);
         recyclerView = findViewById(R.id.main_rv);
         noData = findViewById(R.id.no_data);
+        my_Imageview = findViewById(R.id.imageView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         paymentAdapter = new Adapter();
@@ -51,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
+    }
+
+    public void onClick(View my_Imageview) {
+            // Create an Intent to start the UpdateTrans activity
+        Intent intent = new Intent(MainActivity.this, UpdateTrans.class);
+            // Start the UpdateTrans activity
+        startActivity(intent);
     }
 
     private void getPayments(){

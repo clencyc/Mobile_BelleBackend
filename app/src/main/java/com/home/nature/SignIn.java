@@ -36,6 +36,9 @@ public class SignIn extends AppCompatActivity {
             public void onClick(View view) {
                 bClicked(true);
                 userClick();
+                Intent intent = new Intent(SignIn.this, Home.class);
+                // Start the HomeActivity
+                startActivity(intent);
             }
         });
     }
