@@ -45,18 +45,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        toolbar = findViewById(R.id.main_tb);
         recyclerView = findViewById(R.id.main_rv);
         noData = findViewById(R.id.no_data);
-        my_Imageview = findViewById(R.id.imageView);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         paymentAdapter = new Adapter();
         recyclerView.setAdapter(paymentAdapter);
         getPayments();
-
-        setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
     }
 

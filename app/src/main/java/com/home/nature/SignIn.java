@@ -78,7 +78,7 @@ public class SignIn extends AppCompatActivity {
                         }
                     });
                 }else{
-                    startActivity(new Intent(SignIn.this, dashboard.class));
+                    startActivity(new Intent(SignIn.this, Home.class));
                 }
             }
         }).start();

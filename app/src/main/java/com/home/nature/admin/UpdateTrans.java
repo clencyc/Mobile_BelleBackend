@@ -12,13 +12,11 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.home.nature.R;
 import com.home.nature.entity.PaymentEntity;
 import com.home.nature.repo.PaymentRepo;
-
 import java.util.Date;
 
 public class UpdateTrans extends AppCompatActivity {

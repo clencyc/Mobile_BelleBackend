@@ -13,6 +13,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import com.home.nature.R.id;
 import com.home.nature.R.layout;
+import com.home.nature.admin.dashboard;
+
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
@@ -266,7 +268,7 @@ public final class Home extends AppCompatActivity {
 
                 var2.setOnClickListener((View.OnClickListener)(new View.OnClickListener() {
                     public final void onClick(View it) {
-                        Intent toaccounts = new Intent((Context)Home.this, SignIn.class);
+                        Intent toaccounts = new Intent((Context)Home.this, dashboard.class);
                         Home.this.startActivity(toaccounts);
                     }
                 }));

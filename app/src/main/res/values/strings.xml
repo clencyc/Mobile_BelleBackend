@@ -53,6 +53,10 @@
     <string name="go_back">Go Back</string>
     <string name="admin_logout">Admin Logout</string>
     <string name="update_payment">Update Payment</string>
+    <string name="spend_account">Spend account</string>
+    <string name="_0_30">$0.30</string>
+    <string name="send_money">Send Money</string>
+    <string name="welcome_alfis">Welcome, Alfis</string>
 
     <string-array name="transaction_type">
         <item>Sent</item>
