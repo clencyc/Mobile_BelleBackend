@@ -57,6 +57,7 @@
     <string name="_0_30">$0.30</string>
     <string name="send_money">Send Money</string>
     <string name="welcome_alfis">Welcome, Alfis</string>
+    <string name="add">ADD</string>
 
     <string-array name="transaction_type">
         <item>Sent</item>

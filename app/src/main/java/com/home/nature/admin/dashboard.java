@@ -26,7 +26,6 @@ import java.util.Objects;
 
 public class dashboard extends AppCompatActivity {
     Toolbar toolbar;
-    Button createTransactionBtn;
     RecyclerView recyclerView;
     private List<PaymentEntity> paymentEntityList;
     private Adapter paymentAdapter;
@@ -37,27 +36,15 @@ public class dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
         toolbar = findViewById(R.id.admin_d_tb);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
-
-        createTransactionBtn = findViewById(R.id.admin_d_create_t);
         recyclerView = findViewById(R.id.admin_d_rv);
         noData = findViewById(R.id.admin_d_no_tv);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         paymentAdapter = new Adapter(dashboard.this);
         recyclerView.setAdapter(paymentAdapter);
         getPayments();
-
-        createTransactionBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(dashboard.this, CreateTransaction.class));
-            }
-        });
-
     }
 
     private void getPayments(){

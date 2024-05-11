@@ -10,12 +10,30 @@
         android:id="@+id/curved_bg"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="394dp"
         android:background="@drawable/curved_bg"
-        app:layout_constraintBottom_toTopOf="@+id/search_input_layout"
+        app:layout_constraintBottom_toTopOf="@+id/admin_d_create_t"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/admin_d_create_t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/curved_bg"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -52,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="7dp"
         android:layout_marginBottom="14dp"
-        android:background="@drawable/btnround"
+        android:background="@drawable/bottom_background"
         android:text="@string/send_money"
         app:layout_constraintBottom_toBottomOf="@+id/curved_bg"
         app:layout_constraintStart_toStartOf="@+id/textView2"

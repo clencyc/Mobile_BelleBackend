@@ -14,12 +14,16 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.home.nature.admin.CreateTransaction;
 import com.home.nature.admin.UpdateTrans;
+import com.home.nature.admin.dashboard;
 import com.home.nature.entity.PaymentEntity;
 import com.home.nature.repo.PaymentRepo;
 
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     RecyclerView recyclerView;
+    Button createTransactionBtn;
     TextInputLayout textInputLayout;
     ImageView my_Imageview;
     TextInputEditText textInputEditText;
@@ -46,18 +51,25 @@ public class MainActivity extends AppCompatActivity {
 
 
         recyclerView = findViewById(R.id.main_rv);
+        createTransactionBtn = findViewById(R.id.admin_d_create_t);
         noData = findViewById(R.id.no_data);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         paymentAdapter = new Adapter();
         recyclerView.setAdapter(paymentAdapter);
         getPayments();
-
+        createTransactionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), CreateTransaction.class));
+            }
+        });
     }
 
+
     public void onClick(View my_Imageview) {
-            // Create an Intent to start the UpdateTrans activity
+        // Create an Intent to start the UpdateTrans activity
         Intent intent = new Intent(MainActivity.this, UpdateTrans.class);
-            // Start the UpdateTrans activity
+        // Start the UpdateTrans activity
         startActivity(intent);
     }
 

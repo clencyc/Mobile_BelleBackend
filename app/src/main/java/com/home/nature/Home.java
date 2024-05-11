@@ -268,7 +268,7 @@ public final class Home extends AppCompatActivity {
 
                 var2.setOnClickListener((View.OnClickListener)(new View.OnClickListener() {
                     public final void onClick(View it) {
-                        Intent toaccounts = new Intent((Context)Home.this, dashboard.class);
+                        Intent toaccounts = new Intent((Context)Home.this, MainActivity.class);
                         Home.this.startActivity(toaccounts);
                     }
                 }));
